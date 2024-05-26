@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 <h3>LOGIN</h3>
 
 <br>
@@ -9,10 +11,7 @@
 <form action="" method="post">
     {% csrf_token %}
 
-    <input type="text" name="username" id="" placeholder="Nombre de Usuario">
-    <br>
-    <input type="password" name="password" id="" placeholder="contraseña">
-    <br>
+    {{ form | crispy }}
     <button type="submit">Iniciar Sesión</button>
 
 </form>
